@@ -1,0 +1,9 @@
+# http://pgexercises.com/questions/joins
+
+# inner join: http://www.w3schools.com/sql/sql_join_inner.asp
+
+select starttime
+from cd.bookings
+inner join cd.members
+on cd.bookings.memid=cd.members.memid
+where firstname = 'David' and surname = 'Farrell';
