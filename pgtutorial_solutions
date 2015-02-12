@@ -7,3 +7,13 @@ from cd.bookings
 inner join cd.members
 on cd.bookings.memid=cd.members.memid
 where firstname = 'David' and surname = 'Farrell';
+
+# inner join 2:
+ 
+select starttime, name
+from cd.bookings
+inner join cd.facilities
+on cd.bookings.facid=cd.facilities.facid
+where name like 'Tennis Court %' 
+and starttime >= '2012-09-21 00:00:00' 
+and starttime < '2012-09-22 00:00:00';
