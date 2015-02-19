@@ -69,4 +69,11 @@ and starttime >= '2012-09-21 00:00:00'
 and starttime < '2012-09-22 00:00:00';
 
 
+# produce a list of all members who have recommended another member
+# hint: http://www.w3schools.com/sql/sql_alias.asp
+select distinct cd.members.firstname, cd.members.surname
+from cd.members as members1
+inner join cd.members
+on members1.recommendedby=cd.members.memid
+order by surname;
 
